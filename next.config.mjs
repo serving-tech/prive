@@ -6,6 +6,7 @@ const API_ORIGIN = process.env.API_ORIGIN ?? "https://prive.inoseek.ai";
 const nextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
+  skipTrailingSlashRedirect: true,   // /e/<code>/ is proxied as written instead of being redirected
   async rewrites() {
     return [
       { source: "/e/:code", destination: `${API_ORIGIN}/e/:code/` },
