@@ -10,7 +10,7 @@ const features = [
   { t: "Keep the exact spot private", d: "Everyone sees the place name. The address, pin and map button unlock for guests who are going." },
   { t: "Set a guest limit", d: "Guests see how many spots are left. When it is full the RSVP closes." },
   { t: "Check people in", d: "See who said yes, who brought a plus one and who has arrived." },
-  { t: "Import from Google Calendar", d: "Bring in events you have already planned instead of typing them again." },
+  { t: "Invite only", d: "Make an event exclusive: it stays out of search and only the email addresses you add can see it." },
 ];
 
 export default function Hosts() {
