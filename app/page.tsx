@@ -15,7 +15,7 @@ export default function Home() {
             <DownloadButton />
             <Link href="/how-it-works" className="btn btn--white">See how it works</Link>
           </div>
-          <p className="fineprint mt-2">Free to use. Sign in with Google. Android first.</p>
+          <p className="fineprint mt-2">Free to use. Sign in with Google or email. Android first.</p>
         </div>
         <HeroCard />
       </section>

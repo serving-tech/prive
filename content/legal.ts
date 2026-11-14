@@ -1,7 +1,7 @@
 export type LegalSection = { heading: string; body: string };
 
 export const terms: LegalSection[] = [
-  { heading: "Using Privé", body: "Privé helps people find and host events. You must sign in with a Google account and be old enough to use it. You are responsible for what you post." },
+  { heading: "Using Privé", body: "Privé helps people find and host events. You must sign in with a Google account or an email address and be old enough to use it. You are responsible for what you post." },
   { heading: "Events are hosted by people, not by us", body: "Hosts are responsible for their events, venues, safety and any rules they set. Privé does not organise, sell tickets for, or guarantee any event." },
   { heading: "Your content", body: "You keep ownership of what you post. You allow us to store and show it to other users as the app works. Do not post anything unlawful, hateful, misleading or that infringes someone else's rights." },
   { heading: "Respect other people", body: "Do not harass others, spam them with messages, or impersonate anyone. We may remove content or accounts that break these terms." },
@@ -11,7 +11,7 @@ export const terms: LegalSection[] = [
 ];
 
 export const privacy: LegalSection[] = [
-  { heading: "What we collect when you sign in", body: "Your Google name, email address and profile photo, so we can create your account. We never see your Google password." },
+  { heading: "What we collect when you sign in", body: "If you sign in with Google: your Google name, email address and profile photo. We never see your Google password. If you sign up with email: your name, your email address and a password. Passwords are stored only in a scrambled (hashed) form that nobody at Privé can read, and we email you a 6-digit code to confirm the address and to reset a forgotten password." },
   { heading: "What you add", body: "Events you host (title, place, time, photos, schedule, dress code, messages to guests), your RSVPs (including the guests you bring and a song suggestion), the organizer pages you create, and the interests, town or campus and alert settings you choose." },
   { heading: "Locations", body: "If you host an event you can add a map pin for the venue. You can type an address, paste a Google Maps link, or use your phone's current location. Your location is read once, only when you tap that button, and only the venue's pin is saved, never where you are afterwards. You can choose to show the exact address only to people who are going." },
   { heading: "Add to Google Calendar", body: "The Add to Google Calendar button opens Google Calendar with the event's title, time and place already filled in. Privé never asks for access to your calendar, reads it, or receives anything back from it." },
@@ -28,7 +28,7 @@ export const privacy: LegalSection[] = [
 
 export const faq = [
   { q: "Is it free?", a: "Yes. RSVPs are free, and you can host without paying." },
-  { q: "How do I sign in?", a: "With your Google account. We never see your Google password." },
+  { q: "How do I sign in?", a: "With your Google account, or with an email address and a password. For email sign-ups we send a 6-digit code to confirm the address. Forgot your password? Use the link on the sign-in screen to get a code and choose a new one." },
   { q: "When do I get reminders?", a: "A week before and a day before events you are going to. You can switch reminders off in Alerts." },
   { q: "What if the host has not shared the location?", a: "The event shows as location to be announced. When the host shares it, you get a notification and the map button appears." },
   { q: "Can I delete my account?", a: "Yes. In the app go to Profile, then Delete account. It removes your profile, events, RSVPs and device tokens." },
