@@ -10,6 +10,7 @@ export function Footer() {
           <nav className="footer__links" aria-label="Legal">
             <Link href="/terms">Terms of Use</Link>
             <Link href="/privacy">Privacy Policy</Link>
+            <Link href="/delete-account">Delete account</Link>
             <a href={`mailto:${site.supportEmail}`}>{site.supportEmail}</a>
           </nav>
         </div>
