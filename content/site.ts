@@ -5,7 +5,7 @@ export const site = {
   supportEmail: "prive@vixe.africa",
   // Play Store or APK link. Empty = the buttons point at the /get page instead.
   downloadUrl: process.env.NEXT_PUBLIC_DOWNLOAD_URL ?? "",
-  legalUpdated: "[DATE]",
+  legalUpdated: "22 November 2026",
   tagline: "Find the party. Host the night.",
   description:
     "Privé is where campus events, graduations, parties and themed nights live. RSVP in a tap, get the location, never miss the countdown.",
