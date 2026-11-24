@@ -72,8 +72,8 @@ export function GetSection() {
       <div className="container">
         <div className="cta">
           <span className="wordmark" style={{ fontSize: 44, color: "#fff" }}>Privé</span>
-          <h2 className="h2 mt-2" style={{ fontSize: "clamp(28px, 4.4vw, 40px)" }}>Your next night is in the app</h2>
-          <p className="mt-2" style={{ fontSize: 17 }}>Free on Android. Sign in with Google or email and you are in.</p>
+          <h2 className="h2 mt-2" style={{ fontSize: "clamp(28px, 4.4vw, 40px)" }}>{site.waitlist ? "Be first in line" : "Your next night is in the app"}</h2>
+          <p className="mt-2" style={{ fontSize: 17 }}>{site.waitlist ? "Join the waitlist and we will tell you the day Privé opens." : "Free on Android. Sign in with Google or email and you are in."}</p>
           <div className="mt-4 btn-row" style={{ justifyContent: "center" }}>
             <DownloadButton className="btn btn--white">Download for Android</DownloadButton>
           </div>

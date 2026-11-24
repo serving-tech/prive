@@ -1,12 +1,14 @@
 import Link from "next/link";
 import { DownloadButton } from "@/components/DownloadButton";
 import { HeroCard } from "@/components/HeroCard";
+import { WaitlistHero } from "@/components/WaitlistHero";
+import { site } from "@/content/site";
 import { GetSection, HostsSection, HowSection, VibesSection } from "@/components/Sections";
 
 export default function Home() {
   return (
     <>
-      <section className="container hero">
+      {site.waitlist ? <WaitlistHero /> : <section className="container hero">
         <div className="hero__copy">
           <span className="pill">Events for campus, graduations and nights out</span>
           <h1 className="h1 mt-2">Find the party.<br />Host the night.</h1>
@@ -18,7 +20,7 @@ export default function Home() {
           <p className="fineprint mt-2">Free to use. Sign in with Google or email. Android first.</p>
         </div>
         <HeroCard />
-      </section>
+      </section>}
       <VibesSection />
       <HowSection />
       <HostsSection />

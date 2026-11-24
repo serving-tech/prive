@@ -5,6 +5,8 @@ export const site = {
   supportEmail: "prive@vixe.africa",
   // Play Store or APK link. Empty = the buttons point at the /get page instead.
   downloadUrl: process.env.NEXT_PUBLIC_DOWNLOAD_URL ?? "",
+  // True until the app can be downloaded: the buttons say "Join the waitlist" and the home page shows the form.
+  waitlist: !process.env.NEXT_PUBLIC_DOWNLOAD_URL,
   legalUpdated: "22 November 2026",
   tagline: "Find the party. Host the night.",
   description:
