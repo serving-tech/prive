@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { redirect } from "next/navigation";
 import { GetSection } from "@/components/Sections";
 import { PageIntro } from "@/components/PageIntro";
 import { site } from "@/content/site";
@@ -6,6 +7,7 @@ import { site } from "@/content/site";
 export const metadata: Metadata = { title: "Get the app", description: "Privé is free on Android. Sign in with Google or an email address and you are in." };
 
 export default function Get() {
+  if (site.waitlist) redirect("/waitlist");   // no download page before launch
   return (
     <>
       <PageIntro tag="Get the app" title="Your next night is in the app">Privé is free on Android. Sign in with Google or an email address and you are in.</PageIntro>

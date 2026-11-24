@@ -3,10 +3,10 @@ export const site = {
   name: "Privé",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://prive.vixe.africa",
   supportEmail: "prive@vixe.africa",
-  // Play Store or APK link. Empty = the buttons point at the /get page instead.
-  downloadUrl: process.env.NEXT_PUBLIC_DOWNLOAD_URL ?? "",
-  // True until the app can be downloaded: the buttons say "Join the waitlist" and the home page shows the form.
-  waitlist: !process.env.NEXT_PUBLIC_DOWNLOAD_URL,
+  // Nothing links to the store until NEXT_PUBLIC_LAUNCHED=true is set. Setting only the link is not enough, so a stray value cannot open it early.
+  downloadUrl: process.env.NEXT_PUBLIC_LAUNCHED === "true" ? process.env.NEXT_PUBLIC_DOWNLOAD_URL ?? "" : "",
+  // True until launch: the buttons say "Join the waitlist" and the home page shows the form.
+  waitlist: process.env.NEXT_PUBLIC_LAUNCHED !== "true",
   legalUpdated: "22 November 2026",
   tagline: "Find the party. Host the night.",
   description:
