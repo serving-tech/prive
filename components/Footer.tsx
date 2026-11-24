@@ -14,7 +14,7 @@ export function Footer() {
             <a href={`mailto:${site.supportEmail}`}>{site.supportEmail}</a>
           </nav>
         </div>
-        <p className="footer__small">© {new Date().getFullYear()} Privé. Events are run by their hosts, not by Privé.</p>
+        <p className="footer__small">© {new Date().getFullYear()} Privé. Events are run by their hosts, not by Privé. <b>Privé is a product of Vixe Africa.</b></p>
       </div>
     </footer>
   );

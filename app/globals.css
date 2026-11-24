@@ -217,3 +217,7 @@ h1, h2, h3, p { margin: 0; }
 .wl-err { font-size: 13px; font-weight: 600; color: var(--accent-deep); }
 .wl-err--box { background: #f5f2ef; border-radius: 12px; padding: 10px 14px; }
 .wl-check { width: 56px; height: 56px; border-radius: 50%; background: var(--accent); display: flex; align-items: center; justify-content: center; }
+.wl-perk { width: 48px; height: 48px; border-radius: 50%; background: var(--ink); display: flex; align-items: center; justify-content: center; }
+.wl-band { padding-block: clamp(40px, 6vw, 64px); }
+.wl-band__row { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px; }
+.footer__small b { color: var(--ink); }
