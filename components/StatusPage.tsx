@@ -33,7 +33,7 @@ export function StatusPage({ code, tag, title, children, tone = "accent", action
           {actions ?? (
             <>
               <Link href="/" className="btn btn--accent">Back to home</Link>
-              <Link href={site.waitlist ? "/waitlist" : "/get"} className="btn btn--white">{site.waitlist ? "Join the waitlist" : "Get the app"}</Link>
+              <Link href={site.waitlist ? "/#join" : "/get"} className="btn btn--white">{site.waitlist ? "Join the waitlist" : "Get the app"}</Link>
             </>
           )}
         </div>

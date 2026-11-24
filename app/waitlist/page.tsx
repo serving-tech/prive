@@ -1,8 +1,6 @@
-import type { Metadata } from "next";
-import { WaitlistPage } from "@/components/WaitlistSections";
+import { redirect } from "next/navigation";
 
-export const metadata: Metadata = { title: "Join the waitlist", description: "Privé is getting ready to launch. Join the waitlist and we will tell you the day it opens." };
-
+// The waitlist form is the first thing on the home page. This address is only kept so links in emails and old links keep working.
 export default function Waitlist() {
-  return <WaitlistPage />;
+  redirect("/#join");
 }

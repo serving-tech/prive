@@ -29,7 +29,7 @@ export function Header() {
           {nav.map((n) => (
             <Link key={n.href} href={n.href} aria-current={path === n.href ? "page" : undefined}>{n.label}</Link>
           ))}
-          <Link href={site.waitlist ? "/waitlist" : "/get"} className="btn btn--ink btn--sm">{site.waitlist ? "Join the waitlist" : "Get the app"}</Link>
+          <Link href={site.waitlist ? "/#join" : "/get"} className="btn btn--ink btn--sm">{site.waitlist ? "Join the waitlist" : "Get the app"}</Link>
         </nav>
       </div>
     </header>
