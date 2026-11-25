@@ -20,6 +20,10 @@ const nextConfig = {
       { source: "/waitlist/confirm/:token", destination: `${API_ORIGIN}/api/v1/waitlist/confirm/:token/` },
       { source: "/waitlist/unsubscribe/:token", destination: `${API_ORIGIN}/api/v1/waitlist/unsubscribe/:token/` },
       // The "Open Privé" buttons in our emails. Phones with the app open it; everyone else sees the backend's "get the app" page.
+      { source: "/p/:code", destination: `${API_ORIGIN}/p/:code/` },
+      { source: "/p/:code/", destination: `${API_ORIGIN}/p/:code/` },
+      { source: "/@:slug", destination: `${API_ORIGIN}/@:slug/` },
+      { source: "/@:slug/", destination: `${API_ORIGIN}/@:slug/` },
       { source: "/h/:slug", destination: `${API_ORIGIN}/h/:slug/` },
       { source: "/h/:slug/", destination: `${API_ORIGIN}/h/:slug/` },
       { source: "/o/:slug", destination: `${API_ORIGIN}/o/:slug/` },
