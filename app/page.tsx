@@ -1,9 +1,12 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { DownloadButton } from "@/components/DownloadButton";
 import { HeroCard } from "@/components/HeroCard";
 import { WaitlistHero } from "@/components/WaitlistHero";
 import { site } from "@/content/site";
 import { GetSection, HostsSection, HowSection, VibesSection } from "@/components/Sections";
+
+export const metadata: Metadata = { alternates: { canonical: "/" } };
 
 export default function Home() {
   return (

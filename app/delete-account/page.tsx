@@ -3,6 +3,7 @@ import { PageIntro } from "@/components/PageIntro";
 import { site } from "@/content/site";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/delete-account" },
   title: "Delete your account",
   description: "How to delete your Privé account and what is removed.",
 };

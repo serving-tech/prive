@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { PageIntro } from "@/components/PageIntro";
 import { GetSection, VibesSection } from "@/components/Sections";
 
-export const metadata: Metadata = { title: "Vibes", description: "Every Privé event gets its own look: party, themed, graduation, cultural night or campus." };
+export const metadata: Metadata = { alternates: { canonical: "/vibes" }, title: "Vibes", description: "Every Privé event gets its own look: party, themed, graduation, cultural night or campus." };
 
 const changes = [
   { t: "The card", d: "Events show up in feeds with the ground, accent and shapes of their vibe, so people can tell a graduation from a costume night at a glance." },

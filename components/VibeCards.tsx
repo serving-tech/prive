@@ -2,7 +2,7 @@ import type { ReactNode } from "react";
 
 type Vibe = { id: string; tag: string; title: string; when: string; bg: string; whenColor: string; motif: ReactNode };
 
-const vibes: Vibe[] = [
+export const vibes: Vibe[] = [
   {
     id: "party", tag: "Party", title: "Midnight Bash", when: "Sat 5 Dec · 9 pm", bg: "#cc3f25", whenColor: "#fff",
     motif: (<>

@@ -2,7 +2,7 @@ import type { CSSProperties, ReactNode } from "react";
 
 type Step = { n: string; bg: string; fg: string; sub: string; title: string; text: string; scene: ReactNode };
 
-const steps: Step[] = [
+export const steps: Step[] = [
   {
     n: "1", bg: "#ffffff", fg: "#1b1816", sub: "Discover", title: "Open a link or browse",
     text: "A friend shares an event and the link shows its cover photo, name and date right in the chat. Or browse what is on, filtered by what you like.",

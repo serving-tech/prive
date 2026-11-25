@@ -39,7 +39,7 @@ export function HowSection({ withHeading = true }: { withHeading?: boolean }) {
   );
 }
 
-const hostFeatures = [
+export const hostFeatures = [
   { t: "Location, your way", d: "Drop a pin, paste a Maps link, or say it is still to be announced and tell guests later. Keep the exact spot for people who are going." },
   { t: "Cap the guest list", d: "Set a limit and guests see how many spots are left. When it is full, the RSVP closes itself." },
   { t: "Know who is coming", d: "See who said yes, who brought a plus one and who has arrived. Check people in at the door." },

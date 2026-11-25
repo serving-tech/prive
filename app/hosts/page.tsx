@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { PageIntro } from "@/components/PageIntro";
 import { GetSection, HostsSection } from "@/components/Sections";
 
-export const metadata: Metadata = { title: "For hosts", description: "Host events as yourself or as a club: vibes, locations, guest limits and check-in." };
+export const metadata: Metadata = { alternates: { canonical: "/hosts" }, title: "For hosts", description: "Host events as yourself or as a club: vibes, locations, guest limits and check-in." };
 
 const features = [
   { t: "Pick a vibe", d: "Choose how the card and page look. Add a countdown, a line-up, a dress code or a playlist." },
