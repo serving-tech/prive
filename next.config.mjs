@@ -20,6 +20,10 @@ const nextConfig = {
       { source: "/waitlist/confirm/:token", destination: `${API_ORIGIN}/api/v1/waitlist/confirm/:token/` },
       { source: "/waitlist/unsubscribe/:token", destination: `${API_ORIGIN}/api/v1/waitlist/unsubscribe/:token/` },
       // The "Open Privé" buttons in our emails. Phones with the app open it; everyone else sees the backend's "get the app" page.
+      { source: "/h/:slug", destination: `${API_ORIGIN}/h/:slug/` },
+      { source: "/h/:slug/", destination: `${API_ORIGIN}/h/:slug/` },
+      { source: "/o/:slug", destination: `${API_ORIGIN}/o/:slug/` },
+      { source: "/o/:slug/", destination: `${API_ORIGIN}/o/:slug/` },
       { source: "/open/:path*", destination: `${API_ORIGIN}/open/:path*` },
       // Android App Links check this file on the domain that appears in shared links.
       { source: "/.well-known/assetlinks.json", destination: `${API_ORIGIN}/.well-known/assetlinks.json` },
