@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { LockArt } from "@/components/HeroArt";
 import { PageIntro } from "@/components/PageIntro";
 import { site } from "@/content/site";
 
@@ -17,7 +18,7 @@ const steps = [
 export default function DeleteAccount() {
   return (
     <>
-      <PageIntro tag="Your data" title="Delete your account">
+      <PageIntro tag="Your data" title="Delete your account" tone="ink" art={<LockArt />}>
         You can delete your Privé account and everything that goes with it, from the app or by email.
       </PageIntro>
       <section className="container" style={{ maxWidth: 1064, paddingBottom: "clamp(56px, 9vw, 96px)" }}>

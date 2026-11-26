@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { VibeFan } from "@/components/HeroArt";
 import { PageIntro } from "@/components/PageIntro";
 import { GetSection, VibesSection } from "@/components/Sections";
 
@@ -13,7 +14,7 @@ const changes = [
 export default function Vibes() {
   return (
     <>
-      <PageIntro tag="Vibes" title="Every event gets its own look">
+      <PageIntro tag="Vibes" title="Every event gets its own look" tone="violet" art={<VibeFan />}>
         Pick the vibe that fits the night. Card, page and countdown follow, so guests know what they are walking into before they read a word.
       </PageIntro>
       <VibesSection withHeading={false} />
@@ -21,8 +22,17 @@ export default function Vibes() {
         <div className="container">
           <p className="eyebrow">What a vibe changes</p>
           <h2 className="h2 mt-1">More than a colour</h2>
-          <div className="grid mt-4">
-            {changes.map((c) => <div key={c.t} className="card"><h3>{c.t}</h3><p>{c.d}</p></div>)}
+          <div className="big3 mt-4">
+            {changes.map((c, i) => {
+              const look = [["#cc3f25", "#e8b64c"], ["#12284a", "#e8b64c"], ["#1f4d3a", "#ff8a1f"]][i % 3];
+              return (
+                <div key={c.t} className="big3__p" style={{ background: look[0] }}>
+                  <i style={{ background: look[1] }} aria-hidden="true" />
+                  <b>0{i + 1}</b>
+                  <div><h3>{c.t}</h3><p>{c.d}</p></div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>

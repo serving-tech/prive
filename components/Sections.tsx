@@ -98,9 +98,9 @@ export function FaqSection() {
       <div className="container max-820" style={{ maxWidth: 1000 }}>
         <p className="eyebrow">Questions</p>
         <h2 className="h2 mt-1">Good to know</h2>
-        <div className="faq">
-          {faq.map((f) => (
-            <div key={f.q} className="faq__row"><h3>{f.q}</h3><p>{f.a}</p></div>
+        <div className="faqd">
+          {faq.map((f, i) => (
+            <details key={f.q} open={i === 0}><summary>{f.q}</summary><p>{f.a}</p></details>
           ))}
         </div>
       </div>

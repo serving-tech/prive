@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { HostBoard } from "@/components/HeroArt";
 import { PageIntro } from "@/components/PageIntro";
 import { GetSection, HostsSection } from "@/components/Sections";
 
@@ -16,13 +17,23 @@ const features = [
 export default function Hosts() {
   return (
     <>
-      <PageIntro tag="For hosts" title="Host as yourself, or as a club">Anyone can put on an event. Here is what you get when you do.</PageIntro>
+      <PageIntro tag="For hosts" title="Put on a night in minutes" tone="green" art={<HostBoard />}>A vibe, a place, a guest list and a way to say what is happening. Here is what you get.</PageIntro>
       <HostsSection />
       <section className="section">
         <div className="container">
           <p className="eyebrow">Everything a host needs</p>
           <h2 className="h2 mt-1">Set it up in a few minutes</h2>
-          <div className="grid mt-4">{features.map((f) => <div key={f.t} className="card"><h3>{f.t}</h3><p>{f.d}</p></div>)}</div>
+          <div className="bento mt-4">
+            {features.map((f, i) => {
+              const look = [["#cc3f25", "#fff"], ["#e8b64c", "#1b1816"], ["#2a1840", "#fff"], ["#12284a", "#fff"], ["#fff", "#1b1816"], ["#ff8a1f", "#1b1816"]][i % 6];
+              return (
+                <div key={f.t} className="bento__tile" style={{ background: look[0], color: look[1] }}>
+                  <span className="bento__n">0{i + 1}</span>
+                  <div><h3>{f.t}</h3><p>{f.d}</p></div>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </section>
       <section className="container" style={{ paddingBottom: "clamp(56px, 8vw, 80px)" }}>

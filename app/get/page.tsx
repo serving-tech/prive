@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { redirect } from "next/navigation";
 import { GetSection } from "@/components/Sections";
+import { StepsTrail } from "@/components/HeroArt";
 import { PageIntro } from "@/components/PageIntro";
 import { site } from "@/content/site";
 
@@ -10,7 +11,7 @@ export default function Get() {
   if (site.waitlist) redirect("/#join");   // no download page before launch
   return (
     <>
-      <PageIntro tag="Get the app" title="Your next night is in the app">Privé is free on Android. Sign in with Google or an email address and you are in.</PageIntro>
+      <PageIntro tag="Get the app" title="Your next night is in the app" tone="red" art={<StepsTrail />}>Privé is free on Android. Sign in with Google or an email address and you are in.</PageIntro>
       <section className="container">
         <div className="grid">
           <div className="card"><h3>1. Download</h3><p>{site.downloadUrl ? <a href={site.downloadUrl} style={{ textDecoration: "underline", fontWeight: 700 }}>Get it here</a> : "Privé is rolling out on Google Play. It is in testing now, so it is not in the public store yet. To get early access, write to " + site.supportEmail + " from the email address you use on your phone."}</p></div>

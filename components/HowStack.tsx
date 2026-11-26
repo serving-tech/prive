@@ -5,7 +5,7 @@ type Step = { n: string; bg: string; fg: string; sub: string; title: string; tex
 export const steps: Step[] = [
   {
     n: "1", bg: "#ffffff", fg: "#1b1816", sub: "Discover", title: "Open a link or browse",
-    text: "A friend shares an event and the link shows its cover photo, name and date right in the chat. Or browse what is on, filtered by what you like.",
+    text: "A friend shares an event and the link opens it in the app, with the cover, date and place. Or browse what is on, filtered by what you like.",
     scene: (<>
       <circle className="sh fl" cx="150" cy="150" r="100" fill="#cc3f25" /><circle className="sh fl2" cx="285" cy="95" r="52" fill="#1b1816" />
       <path className="sh sp" d="M300 260l34 -58 34 58Z" fill="#e0a33a" /><circle className="sh fl3" cx="70" cy="258" r="24" fill="#2347e0" />
