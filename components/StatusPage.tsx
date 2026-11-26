@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
+import { Shapes } from "./Shapes";
 import { site } from "@/content/site";
 
 type Props = {
@@ -14,6 +15,8 @@ type Props = {
 // One look for every "something is not here" page: not found, an error, an unreachable page. Same notched card as the rest of the site.
 export function StatusPage({ code, tag, title, children, tone = "accent", actions }: Props) {
   return (
+    <div className="has-shapes">
+    <Shapes layout="quiet" />
     <section className="container status">
       <div className={`notch status__card status__card--${tone}`}>
         <svg className="status__art" viewBox="0 0 400 300" aria-hidden="true" preserveAspectRatio="xMaxYMax slice">
@@ -40,5 +43,6 @@ export function StatusPage({ code, tag, title, children, tone = "accent", action
         <p className="fineprint mt-3">Still stuck? Write to <a href={`mailto:${site.supportEmail}`} style={{ textDecoration: "underline", fontWeight: 700 }}>{site.supportEmail}</a>.</p>
       </div>
     </section>
+    </div>
   );
 }

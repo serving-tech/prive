@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ShapeBadge, Shapes } from "@/components/Shapes";
 import { PageIntro } from "@/components/PageIntro";
 import { GetSection, HostsSection } from "@/components/Sections";
 
@@ -18,11 +19,12 @@ export default function Hosts() {
     <>
       <PageIntro tag="For hosts" title="Host as yourself, or as a club">Anyone can put on an event. Here is what you get when you do.</PageIntro>
       <HostsSection />
-      <section className="section">
+      <section className="section has-shapes">
+        <Shapes layout="edgeL" />
         <div className="container">
           <p className="eyebrow">Everything a host needs</p>
           <h2 className="h2 mt-1">Set it up in a few minutes</h2>
-          <div className="grid mt-4">{features.map((f) => <div key={f.t} className="card"><h3>{f.t}</h3><p>{f.d}</p></div>)}</div>
+          <div className="grid mt-4">{features.map((f, i) => <div key={f.t} className="card"><ShapeBadge i={i} /><h3>{f.t}</h3><p>{f.d}</p></div>)}</div>
         </div>
       </section>
       <section className="container" style={{ paddingBottom: "clamp(56px, 8vw, 80px)" }}>
@@ -33,7 +35,7 @@ export default function Hosts() {
             <p className="lead mt-2" style={{ fontSize: 17 }}>Set up a page with your logo and a short bio. People follow it, and every event you post reaches them as a notification. Host as yourself any time, or as your page.</p>
           </div>
           <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
-            {[["Your club or venue", "Club or venue", "#cc3f25"], ["Your campus group", "Campus group", "#2347e0"]].map(([n, t, c]) => (
+            {[["Your club or venue", "Club or venue", "#cc3f25"], ["Your campus group", "Campus group", "#12284a"]].map(([n, t, c]) => (
               <div key={n} style={{ display: "flex", alignItems: "center", gap: 14, background: "var(--ground)", borderRadius: 20, padding: 14 }}>
                 <span style={{ width: 48, height: 48, borderRadius: 14, background: c }} aria-hidden="true" />
                 <span><b style={{ display: "block" }}>{n}</b><span style={{ fontSize: 14, color: "var(--muted)" }}>{t}</span></span>

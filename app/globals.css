@@ -111,6 +111,35 @@ h1, h2, h3, p { margin: 0; }
 @keyframes fun-bob { from { translate: 0 -7px; } to { translate: 0 7px; } }
 @keyframes shape-bob { from { transform: translateY(-6px) rotate(-3deg); } to { transform: translateY(6px) rotate(3deg); } }
 
+/* Shapes everywhere */
+.has-shapes { position: relative; overflow: clip; }
+.has-shapes > :not(.shapes) { position: relative; z-index: 1; }
+@media (max-width: 1020px) { .shapes .hide-md { display: none; } }
+@media (max-width: 640px) { .shapes .hide-sm { display: none; } }
+.eyebrow { display: inline-flex; align-items: center; gap: 10px; }
+.eyebrow::before { content: ""; width: 9px; height: 9px; border-radius: 2px; background: var(--accent); transform: rotate(45deg); flex: none; }
+.section--ink .eyebrow::before { background: var(--gold); }
+.stack__card .eyebrow::before { background: currentColor; }
+.badge { display: inline-flex; align-items: center; justify-content: center; border-radius: 14px; flex: none; transition: transform .35s cubic-bezier(.3,1.6,.5,1); }
+.badge i { display: block; }
+.card { transition: transform .25s ease, box-shadow .25s ease; }
+.card:hover { transform: translateY(-4px); box-shadow: 0 14px 30px rgba(27, 24, 22, .09); }
+.card:hover .badge { transform: rotate(-12deg) scale(1.1); }
+.card .badge { margin-bottom: 14px; }
+.card--dark:hover { box-shadow: none; }
+.legal__row h2 { display: flex; align-items: flex-start; gap: 12px; }
+.legal__row h2 .badge { margin: 0; border-radius: 10px; }
+
+/* The band of kinds of night */
+.marquee { background: var(--ink); color: #fff; overflow: hidden; transform: rotate(-1.2deg); margin: -8px -24px 8px; position: relative; z-index: 2; }
+.marquee__track { display: flex; width: max-content; }
+.marquee__run { display: flex; align-items: center; flex: none; }
+.marquee__item { display: inline-flex; align-items: center; gap: 22px; padding: 18px 0 18px 22px; font-weight: 800; font-size: clamp(18px, 2.6vw, 26px); letter-spacing: -0.01em; white-space: nowrap; }
+.marquee__sh { display: inline-flex; }
+@media (prefers-reduced-motion: no-preference) { .marquee__track { animation: marquee 38s linear infinite; } .marquee:hover .marquee__track { animation-play-state: paused; } }
+@keyframes marquee { to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) { .marquee { overflow-x: auto; } }
+
 /* Hero */
 .hero { display: flex; flex-wrap: wrap; align-items: center; gap: clamp(32px, 6vw, 64px); padding-block: clamp(32px, 6vw, 64px) clamp(56px, 8vw, 88px); }
 .hero__copy { flex: 1 1 420px; min-width: 0; }
@@ -204,7 +233,7 @@ h1, h2, h3, p { margin: 0; }
 .status { display: flex; flex-wrap: wrap; align-items: center; gap: clamp(28px, 5vw, 56px); padding-block: clamp(40px, 7vw, 80px) clamp(56px, 9vw, 96px); }
 .status__card { --bite: 74px; flex: 1 1 280px; max-width: 460px; min-height: 340px; color: #fff; background: var(--accent); }
 .status__card--ink { background: var(--ink); }
-.status__card--blue { background: var(--blue); }
+.status__card--blue { background: var(--navy); }
 .status__art { position: absolute; inset: 0; width: 100%; height: 100%; }
 .status__body { position: relative; min-height: 340px; padding: clamp(22px, 4vw, 30px); display: flex; flex-direction: column; justify-content: space-between; }
 .status__code { font-weight: 800; font-size: clamp(88px, 16vw, 132px); line-height: .9; letter-spacing: -0.05em; }

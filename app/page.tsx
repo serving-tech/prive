@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { DownloadButton } from "@/components/DownloadButton";
+import { Marquee, Shapes } from "@/components/Shapes";
 import { HeroCard } from "@/components/HeroCard";
 import { WaitlistHero } from "@/components/WaitlistHero";
 import { site } from "@/content/site";
@@ -12,6 +13,8 @@ export default function Home() {
   return (
     <>
       {/* Until the app can be downloaded, the first screen is the waitlist form. The rest of the page stays as it was. */}
+      <div className="has-shapes">
+      <Shapes layout="hero" />
       {site.waitlist ? <WaitlistHero /> : <section className="container hero">
         <div className="hero__copy">
           <span className="pill">Events for campus, graduations and nights out</span>
@@ -25,6 +28,8 @@ export default function Home() {
         </div>
         <HeroCard />
       </section>}
+      </div>
+      <Marquee />
       <VibesSection />
       <HowSection />
       <HostsSection />
