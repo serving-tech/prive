@@ -6,7 +6,7 @@ const ArrowButton = () => (
 
 // The sample event card in the hero. Content is placeholder, not a real event.
 export function HeroCard() {
-  const faces: [string, string, string][] = [["A", "#e8b64c", "#1b1816"], ["K", "#12284a", "#fff"], ["M", "#1f4d3a", "#fff"], ["J", "#f5f2ef", "#1b1816"]];
+  const faces: [string, string, string][] = [["A", "#e8b64c", "#1b1816"], ["K", "#2347e0", "#fff"], ["M", "#1f4d3a", "#fff"], ["J", "#f5f2ef", "#1b1816"]];
   return (
     <div className="hero__art">
       <div style={{ position: "relative" }}>

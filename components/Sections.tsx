@@ -1,15 +1,13 @@
 import Link from "next/link";
 import { faq } from "@/content/legal";
 import { site } from "@/content/site";
-import { ShapeBadge, Shapes } from "./Shapes";
 import { DownloadButton } from "./DownloadButton";
 import { HowStack } from "./HowStack";
 import { VibeCards } from "./VibeCards";
 
 export function VibesSection({ withHeading = true }: { withHeading?: boolean }) {
   return (
-    <section className="section section--white has-shapes">
-      {withHeading ? <Shapes layout="edgeR" /> : null}
+    <section className="section section--white">
       <div className="container">
         {withHeading ? (
           <>
@@ -27,8 +25,7 @@ export function VibesSection({ withHeading = true }: { withHeading?: boolean }) 
 
 export function HowSection({ withHeading = true }: { withHeading?: boolean }) {
   return (
-    <section className="section has-shapes">
-      {withHeading ? <Shapes layout="edgeL" /> : null}
+    <section className="section">
       <div className="container">
         {withHeading ? (
           <>
@@ -51,8 +48,7 @@ export const hostFeatures = [
 
 export function HostsSection() {
   return (
-    <section className="section section--ink has-shapes">
-      <Shapes layout="ink" />
+    <section className="section section--ink">
       <div className="container split">
         <div>
           <p className="eyebrow">For hosts</p>
@@ -61,8 +57,8 @@ export function HostsSection() {
           <div className="mt-4 btn-row"><DownloadButton>Start hosting</DownloadButton></div>
         </div>
         <div className="grid" style={{ gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 220px), 1fr))" }}>
-          {hostFeatures.map((f, i) => (
-            <div key={f.t} className="card card--dark"><ShapeBadge i={i + 2} size={38} /><h3>{f.t}</h3><p>{f.d}</p></div>
+          {hostFeatures.map((f) => (
+            <div key={f.t} className="card card--dark"><h3>{f.t}</h3><p>{f.d}</p></div>
           ))}
         </div>
       </div>
@@ -98,8 +94,7 @@ export function GetSection() {
 
 export function FaqSection() {
   return (
-    <section className="section has-shapes">
-      <Shapes layout="edgeR" />
+    <section className="section">
       <div className="container max-820" style={{ maxWidth: 1000 }}>
         <p className="eyebrow">Questions</p>
         <h2 className="h2 mt-1">Good to know</h2>

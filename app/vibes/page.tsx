@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { ShapeBadge, Shapes } from "@/components/Shapes";
 import { PageIntro } from "@/components/PageIntro";
 import { GetSection, VibesSection } from "@/components/Sections";
 
@@ -18,13 +17,12 @@ export default function Vibes() {
         Pick the vibe that fits the night. Card, page and countdown follow, so guests know what they are walking into before they read a word.
       </PageIntro>
       <VibesSection withHeading={false} />
-      <section className="section has-shapes">
-        <Shapes layout="edgeR" />
+      <section className="section">
         <div className="container">
           <p className="eyebrow">What a vibe changes</p>
           <h2 className="h2 mt-1">More than a colour</h2>
           <div className="grid mt-4">
-            {changes.map((c, i) => <div key={c.t} className="card"><ShapeBadge i={i + 3} /><h3>{c.t}</h3><p>{c.d}</p></div>)}
+            {changes.map((c) => <div key={c.t} className="card"><h3>{c.t}</h3><p>{c.d}</p></div>)}
           </div>
         </div>
       </section>
