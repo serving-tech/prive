@@ -71,6 +71,14 @@ export function GetSection() {
     <section className="section">
       <div className="container">
         <div className="cta">
+          <div className="shapes" aria-hidden="true">
+            <i className="bob" style={{ left: -50, top: -40, width: 150, height: 150, borderRadius: "50%", background: "#e8b64c" }} />
+            <svg className="bob" style={{ right: 26, top: 22 }} width="84" height="84" viewBox="0 0 100 100"><polygon points="8,92 50,8 92,92" fill="#12284a" /></svg>
+            <i className="bob" style={{ right: 130, bottom: 28, width: 30, height: 30, borderRadius: 6, background: "#2a1840", transform: "rotate(45deg)" }} />
+            <i className="bob" style={{ right: -40, bottom: -50, width: 140, height: 140, borderRadius: "50%", border: "14px solid #ff8a1f" }} />
+            <svg className="bob" style={{ left: 40, bottom: -22 }} width="96" height="96" viewBox="0 0 100 100"><polygon points="8,92 50,8 92,92" fill="#1f4d3a" transform="rotate(-12 50 50)" /></svg>
+            <i className="bob" style={{ left: 150, top: 34, width: 22, height: 22, borderRadius: "50%", background: "#f5f2ef" }} />
+          </div>
           <span className="wordmark" style={{ fontSize: 44, color: "#fff" }}>Privé</span>
           <h2 className="h2 mt-2" style={{ fontSize: "clamp(28px, 4.4vw, 40px)" }}>{site.waitlist ? "Be first in line" : "Your next night is in the app"}</h2>
           <p className="mt-2" style={{ fontSize: 17 }}>{site.waitlist ? "Join the waitlist and we will tell you the day Privé opens." : "Free on Android. Sign in with Google or email and you are in."}</p>

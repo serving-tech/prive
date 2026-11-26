@@ -11,7 +11,7 @@ export default function OpengraphImage() {
     (
       <div style={{ width: "100%", height: "100%", display: "flex", background: "#f5f2ef", padding: 64, fontFamily: "sans-serif" }}>
         <div style={{ display: "flex", flexDirection: "column", justifyContent: "space-between", flex: 1, paddingRight: 32 }}>
-          <div style={{ fontSize: 72, fontWeight: 700, color: "#1f40f2", letterSpacing: -3 }}>Privé</div>
+          <div style={{ fontSize: 72, fontWeight: 700, color: "#1b1816", letterSpacing: -3 }}>Privé</div>
           <div style={{ display: "flex", flexDirection: "column" }}>
             <div style={{ fontSize: 84, fontWeight: 700, color: "#1b1816", lineHeight: 1.02, letterSpacing: -3 }}>Find the party.</div>
             <div style={{ fontSize: 84, fontWeight: 700, color: "#1b1816", lineHeight: 1.02, letterSpacing: -3 }}>Host the night.</div>
