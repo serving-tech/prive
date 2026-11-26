@@ -4,20 +4,25 @@ import { site } from "@/content/site";
 import { DownloadButton } from "./DownloadButton";
 import { HowStack } from "./HowStack";
 import { VibeCards } from "./VibeCards";
+import { VibeDeck } from "./VibeDeck";
 
 export function VibesSection({ withHeading = true }: { withHeading?: boolean }) {
   return (
     <section className="section section--white">
       <div className="container">
         {withHeading ? (
-          <>
-            <p className="eyebrow">Vibes</p>
-            <h2 className="h2 mt-1 max-820">Every event gets its own look</h2>
-            <p className="lead mt-2 max-640">Pick a vibe when you create an event and the card, the page and the countdown all follow. Guests know what kind of night it is before they read a word.</p>
-          </>
-        ) : null}
-        <div className={withHeading ? "mt-4" : undefined}><VibeCards /></div>
-        {withHeading ? <p className="mt-3"><Link href="/vibes" className="fineprint" style={{ fontWeight: 700, textDecoration: "underline" }}>More about vibes</Link></p> : null}
+          <div className="deck-row">
+            <div>
+              <p className="eyebrow">Vibes</p>
+              <h2 className="h2 mt-1 max-820">Every event gets its own look</h2>
+              <p className="lead mt-2 max-640">Pick a vibe when you create an event and the card, the page and the countdown all follow. Guests know what kind of night it is before they read a word.</p>
+              <p className="mt-3"><Link href="/vibes" className="btn btn--accent">See every vibe</Link></p>
+            </div>
+            <VibeDeck />
+          </div>
+        ) : (
+          <VibeCards />
+        )}
       </div>
     </section>
   );

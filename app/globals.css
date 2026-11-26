@@ -314,3 +314,22 @@ h1, h2, h3, p { margin: 0; }
   .fan { height: 250px; }
   .lockart { width: 150px; height: 150px; }
 }
+
+/* The vibe deck on the home page */
+.deck-row { display: flex; flex-wrap: wrap; align-items: center; gap: clamp(32px, 6vw, 72px); }
+.deck-row > div:first-child { flex: 1 1 380px; min-width: 0; }
+.deck { flex: 1 1 360px; min-width: 0; display: flex; flex-direction: column; align-items: center; gap: 22px; }
+.deck__stack { position: relative; width: min(320px, 82vw); height: min(420px, 108vw); cursor: pointer; margin-block: 14px; }
+.deck__card { position: absolute; inset: 0; transform-origin: 50% 110%; transform: translateX(var(--x)) rotate(var(--r)) scale(var(--s)); transition: transform .55s cubic-bezier(.3,1.3,.5,1); filter: drop-shadow(0 14px 22px rgba(27, 24, 22, .16)); }
+.deck__card .vibe, .deck__card .vibe__body { min-height: 100%; height: 100%; --bite: 60px; }
+.deck__card .vibe { border-radius: 30px; }
+.deck__card .vibe__title { font-size: 34px; }
+.deck__stack.is-spread .deck__card { transform: translateX(calc(var(--x) * 1.7)) rotate(calc(var(--r) * 1.5)) scale(var(--s)); }
+.deck__ctl { display: flex; align-items: center; gap: 18px; }
+.deck__dots { display: inline-flex; align-items: center; gap: 6px; } .deck__dots i { display: block; height: 8px; border-radius: 4px; transition: width .3s ease, background .3s ease; }
+@media (prefers-reduced-motion: reduce) { .deck__card { transition: none; } }
+.deck { overflow: clip; padding-inline: 8px; }
+@media (max-width: 520px) {
+  .deck__card { transform: translateX(calc(var(--x) * .5)) rotate(calc(var(--r) * .8)) scale(var(--s)); }
+  .deck__stack.is-spread .deck__card { transform: translateX(calc(var(--x) * .7)) rotate(var(--r)) scale(var(--s)); }
+}
