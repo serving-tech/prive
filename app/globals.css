@@ -306,3 +306,11 @@ h1, h2, h3, p { margin: 0; }
 .legal__sec h2 span { flex: none; width: 40px; height: 40px; border-radius: 13px; display: inline-flex; align-items: center; justify-content: center; font-size: 16px; font-weight: 800; color: #fff; }
 .legal__sec p { margin-top: 14px; color: #3a3430; line-height: 1.7; }
 @media (max-width: 900px) { .legal { grid-template-columns: 1fr; } .legal__toc { display: none; } }
+@media (max-width: 640px) {
+  .phero { min-height: 0; padding: 26px 22px 30px; }
+  .phero__dot { width: 150px; height: 150px; right: -50px; bottom: -60px; }
+  .phero__art { min-height: 0; padding-top: 6px; }
+  .trail { gap: 10px; }
+  .fan { height: 250px; }
+  .lockart { width: 150px; height: 150px; }
+}
