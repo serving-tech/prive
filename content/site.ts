@@ -2,7 +2,8 @@
 
 // The store link shows only when BOTH are set: NEXT_PUBLIC_LAUNCHED=true and NEXT_PUBLIC_DOWNLOAD_URL (the Google Play address).
 // With either one missing, the whole site stays on the waitlist, and the link is not in anything a visitor downloads.
-const link = process.env.NEXT_PUBLIC_LAUNCHED === "true" ? (process.env.NEXT_PUBLIC_DOWNLOAD_URL ?? "").trim() : "";
+// next.config.mjs makes that decision at build time; only its answer is read here.
+const link = process.env.STORE_LINK ?? "";
 
 export const site = {
   name: "Privé",
