@@ -3,7 +3,7 @@ import { site } from "@/content/site";
 
 type Props = { className?: string; children?: React.ReactNode; page?: boolean };
 
-// Goes straight to the store or APK once NEXT_PUBLIC_DOWNLOAD_URL is set; until then it opens the /get page.
+// "Join the waitlist" until the store link is public (see content/site.ts); after that it goes straight to the store.
 export function DownloadButton({ className = "btn btn--accent", children = "Get the Android app", page = false }: Props) {
   if (site.waitlist) {
     return <Link className={className} href="/#join">Join the waitlist</Link>;
