@@ -12,7 +12,7 @@ export const site = {
   downloadUrl: link,
   // True until there is a link to give: the buttons say "Join the waitlist", the home page shows the form, and /get goes to it.
   waitlist: !link,
-  legalUpdated: "22 November 2026",
+  legalUpdated: "27 November 2026",
   tagline: "Find the party. Host the night.",
   description:
     "Privé is where campus events, graduations, parties and themed nights live. RSVP in a tap, get the location, never miss the countdown.",
